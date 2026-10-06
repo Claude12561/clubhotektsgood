@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CLUB HOTEK TSS - TVET School in Gisozi, Gasabo, Rwanda. Practical skills for better life.">
+    <meta name="keywords" content="Club Hotek TSS, TVET Rwanda, Gisozi, Gasabo, Food and Beverage, Automobile, Culinary, Tailoring, Hairdressing, Multimedia">
+    <meta name="author" content="CLUB HOTEK TSS">
+    <title>CLUB HOTEK TSS | Practical Skills for Better Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<div id="preloader">
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <h3>CLUB HOTEK TSS</h3>
+        <p data-i18n="loading">Loading...</p>
+    </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-bar-marquee">
+            <marquee><p data-i18n="welcomeMarquee" style="font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: x-large;">Welcome to CLUB HOTEK TSS, Admission is Ongoing in this upcoming Academic year 🎓🎓🎓</p></marquee>
+        </div>
+        <div class="top-bar-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" type="button" aria-label="Change language">
+                    <i class="fas fa-globe"></i>
+                    <span data-current-lang>English</span>
+                    <i class="fas fa-chevron-down caret"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                    <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                    <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                    <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                    <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                    <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="CLUB HOTEK TSS Logo" onerror="this.style.display='none';">
+            <div class="logo-text">
+                <strong>CLUB HOTEK</strong>
+                <span>TSS</span>
+            </div>
+        </a>
+
+        <!-- NAV SELECT (quick page jump) -->
+
+        <!-- 
+        <div class="nav-select-wrap">
+            <select class="nav-select" id="navSelect" aria-label="Quick page jump">
+                <option value="index.html" selected data-i18n="navHome">Home</option>
+                <option value="about.html" data-i18n="navAbout">About</option>
+                <option value="trades.html" data-i18n="navTrades">Trades</option>
+                <option value="performance.html" data-i18n="navPerformance">Performance</option>
+                <option value="admissions.html" data-i18n="navAdmissions">Admissions</option>
+                <option value="gallery.html" data-i18n="navGallery">Gallery</option>
+                <option value="news.html" data-i18n="navNews">News &amp; Events</option>
+                <option value="faq.html" data-i18n="navFaq">FAQ</option>
+                <option value="contact.html" data-i18n="navContact">Contact</option>
+            </select>
+        </div>
+-->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link active" data-i18n="navHome">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+            <a href="trades.html" class="nav-link" data-i18n="navTrades">Trades</a>
+            <a href="performance.html" class="nav-link" data-i18n="navPerformance">Performance</a>
+            <a href="admissions.html" class="nav-link" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" class="nav-link" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" class="nav-link" data-i18n="navFaq">FAQ</a>
+            <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            <div class="mobile-lang-block">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                        <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                        <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                        <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                        <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                        <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                    </div>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('assets/images/homee.png');"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/event-22.png');"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/graduation1.png');"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/gallery-6.png');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-graduation-cap"></i>
+            <span data-i18n="heroBadge">Technical &amp; Vocational Education and Training</span>
+        </div>
+        <h1><span data-i18n="heroWelcome">Welcome to</span><span>CLUB HOTEK TSS</span></h1>
+        <p class="hero-slogan">
+            <strong data-i18n="heroSlogan">Hitamo neza utegure ejo heza</strong><br>
+            <small data-i18n="heroSloganSub">Choose well to prepare for a better tomorrow</small>
+        </p>
+        <p class="hero-description" data-i18n="heroDescription">Building practical skills, creativity, professionalism and entrepreneurship for a better future.</p>
+        <div class="hero-buttons">
+            <a href="trades.html" class="btn btn-primary"><span data-i18n="heroBtnTrades">Explore Our Trades</span><i class="fas fa-arrow-right"></i></a>
+            <a href="admissions.html" class="btn btn-outline"><span data-i18n="heroBtnApply">Apply Now</span><i class="fas fa-user-plus"></i></a>
+        </div>
+    </div>
+    <div class="hero-dots">
+        <button class="active" data-slide="0" aria-label="Slide 1"></button>
+        <button data-slide="1" aria-label="Slide 2"></button>
+        <button data-slide="2" aria-label="Slide 3"></button>
+        <button data-slide="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="hero-scroll"><a href="#highlights"><i class="fas fa-chevron-down"></i></a></div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+    <div class="container trust-grid">
+        <div class="trust-item"><i class="fas fa-award"></i> WDA / RTB Accredited</div>
+        <div class="trust-item"><i class="fas fa-certificate"></i> National TVET Curriculum</div>
+        <div class="trust-item"><i class="fas fa-users"></i> 500+ Learners Trained</div>
+        <div class="trust-item"><i class="fas fa-handshake"></i> Industry Partnerships</div>
+    </div>
+</section>
+
+<!-- QUICK HIGHLIGHTS -->
+<section class="quick-info" id="highlights">
+    <div class="container quick-grid">
+        <div class="quick-card"><div class="quick-icon"><i class="fas fa-book-open"></i></div><div><h4 data-i18n="stat1">Main Programs</h4><p>6 TVET Trades</p></div></div>
+        <div class="quick-card"><div class="quick-icon"><i class="fas fa-user-graduate"></i></div><div><h4 data-i18n="stat2">Skills Focused</h4><p>100% Practical</p></div></div>
+        <div class="quick-card"><div class="quick-icon"><i class="fas fa-tools"></i></div><div><h4 data-i18n="stat3">Practical Learning</h4><p>Hands-on training</p></div></div>
+        <div class="quick-card"><div class="quick-icon"><i class="fas fa-lightbulb"></i></div><div><h4 data-i18n="stat4">Innovation</h4><p>Creative thinking</p></div></div>
+    </div>
+</section>
+
+<!-- HOME INTRO -->
+<section class="section home-intro">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label" data-i18n="aboutLabel">ABOUT OUR SCHOOL</span>
+            <h2><span data-i18n="aboutWelcome">Welcome to</span> <span>CLUB HOTEK TSS</span></h2>
+            <div class="section-line"></div>
+            <p data-i18n="aboutTagline">A place where practical skills meet opportunity.</p>
+        </div>
+        <div class="home-intro-grid">
+            <div class="home-intro-card"><div class="home-intro-icon"><i class="fas fa-hands"></i></div><h3 data-i18n="why1Title">Hands-on Training</h3><p data-i18n="why1Desc">Learners develop practical skills through real-world activities and workshop practice.</p></div>
+            <div class="home-intro-card"><div class="home-intro-icon"><i class="fas fa-user-tie"></i></div><h3 data-i18n="why2Title">Professional Skills</h3><p data-i18n="why2Desc">We prepare learners for professional workplaces and modern career opportunities.</p></div>
+            <div class="home-intro-card"><div class="home-intro-icon"><i class="fas fa-lightbulb"></i></div><h3 data-i18n="why3Title">Innovation</h3><p data-i18n="why3Desc">Creativity, entrepreneurship and problem-solving are encouraged throughout training.</p></div>
+            <div class="home-intro-card"><div class="home-intro-icon"><i class="fas fa-people-group"></i></div><h3 data-i18n="why4Title">Community</h3><p data-i18n="why4Desc">We encourage teamwork, discipline, respect and responsible citizenship.</p></div>
+        </div>
+        <div class="home-intro-actions">
+            <a href="about.html" class="btn btn-primary"><span data-i18n="aboutBtn">Discover Our Programs</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container cta-content">
+        <div>
+            <span data-i18n="ctaLabel">HITAMO NEZA UTEGURE EJO HEZA</span>
+            <h2 data-i18n="ctaHeading">Your Future Starts With a Skill.</h2>
+            <p data-i18n="ctaDesc">Join CLUB HOTEK TSS and build practical skills for life.</p>
+        </div>
+        <a href="admissions.html" class="btn btn-light"><span data-i18n="ctaBtn">Apply / Contact Us</span><i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<!-- VISITOR COUNTER -->
+<section class="visitor-counter-section">
+    <div class="container">
+        <div class="visitor-counter-card">
+            <div class="visitor-counter-header">
+                <div class="visitor-counter-icon"><i class="fas fa-chart-line"></i></div>
+                <div>
+                    <span class="visitor-label" data-i18n="visitorLabel">WEBSITE VISITORS</span>
+                    <h3 data-i18n="visitorHeading">Thank you for visiting us!</h3>
+                </div>
+            </div>
+            <div class="visitor-stats-grid">
+                <div class="visitor-stat"><i class="fas fa-eye"></i><div class="visitor-number" id="visitorTotal">—</div><div class="visitor-caption" data-i18n="visitorTotalLabel">Total Visits</div></div>
+                <div class="visitor-stat"><i class="fas fa-calendar-day"></i><div class="visitor-number" id="visitorToday">—</div><div class="visitor-caption" data-i18n="visitorTodayLabel">Today</div></div>
+                <div class="visitor-stat"><i class="fas fa-user-check"></i><div class="visitor-number" id="visitorUnique">—</div><div class="visitor-caption" data-i18n="visitorUniqueLabel">Your Visits</div></div>
+                <div class="visitor-stat"><i class="fas fa-globe"></i><div class="visitor-number" id="visitorLive"><span class="live-dot"></span> LIVE</div><div class="visitor-caption" data-i18n="visitorStatusLabel">Status</div></div>
+            </div>
+            <p class="visitor-note"><i class="fas fa-shield-halved"></i><span data-i18n="visitorNote">Visitor statistics are updated in real time. No personal data is collected.</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-strip">
+    <div class="container newsletter-inner">
+        <div>
+            <h3 data-i18n="newsletterTitle">Stay Updated with CLUB HOTEK TSS</h3>
+            <p data-i18n="newsletterText">Subscribe to receive admissions news, events and program updates directly in your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" data-i18n-placeholder="newsletterPlaceholder" required>
+            <button type="submit" data-i18n="newsletterBtn">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo"><div><strong>CLUB HOTEK TSS</strong></div></div>
+            <p><strong>Hitamo neza utegure ejo heza.</strong><br><span data-i18n="footerTagline">Practical Skills for Better Life</span></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/250788301833"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerQuick">Quick Links</h3>
+            <a href="index.html" data-i18n="navHome">Home</a>
+            <a href="about.html" data-i18n="footerAbout">About Us</a>
+            <a href="trades.html" data-i18n="navTrades">Our Trades</a>
+            <a href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerOurTrades">Our Trades</h3>
+            <a href="trades.html" data-i18n="trade1Title">Food &amp; Beverage Operations</a>
+            <a href="trades.html" data-i18n="trade2Title">Automobile Mechanics</a>
+            <a href="trades.html" data-i18n="trade3Title">Culinary Arts</a>
+            <a href="trades.html" data-i18n="trade4Title">Tailoring</a>
+            <a href="trades.html" data-i18n="trade5Title">Hairdressing</a>
+            <a href="trades.html" data-i18n="trade6Title">Multimedia</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerContact">Contact</h3>
+            <p><i class="fas fa-location-dot"></i> Gisozi, Gasabo District</p>
+            <p><i class="fas fa-phone"></i> 0788301833</p>
+            <p><i class="fas fa-phone"></i> 0788627310</p>
+            <p><i class="fas fa-envelope"></i> clubhotek@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p>Copyright &copy; 2026 CLUB HOTEK TSS. Alright Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toastMessage" data-i18n="toastSuccess">Message sent successfully.</span></div>
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

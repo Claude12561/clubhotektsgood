@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About CLUB HOTEK TSS - Vision, Mission, Background, Leadership and Accreditation.">
+    <title>About Us | CLUB HOTEK TSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        /* ---- Enhanced team photo styling: ensure faces are visible & well-framed ---- */
+        .team-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover .team-photo img {
+            transform: scale(1.03);
+        }
+        .team-photo img {
+            object-position: center 25%;
+        }
+        @supports not (aspect-ratio: 1 / 1) {
+            .team-photo {
+                height: 0;
+                padding-bottom: 100%;
+                position: relative;
+            }
+            .team-photo img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* ---- VISITOR STATS WIDGET ---- */
+        .visitor-stats-widget {
+            background: linear-gradient(135deg, #0b2b4f 0%, #1a4a7a 100%);
+            color: #fff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 16px;
+            margin: 1.8rem 0 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.2rem 2rem;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Inter', sans-serif;
+        }
+        .visitor-stats-widget .stat-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem 2rem;
+        }
+        .visitor-stats-widget .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.45rem 1.2rem 0.45rem 0.9rem;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: background 0.25s ease;
+        }
+        .visitor-stats-widget .stat-item:hover {
+            background: rgba(255, 255, 255, 0.16);
+        }
+        .visitor-stats-widget .stat-item i {
+            font-size: 1.15rem;
+            color: #7ec8ff;
+            width: 1.5rem;
+            text-align: center;
+        }
+        .visitor-stats-widget .stat-label {
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            opacity: 0.75;
+            margin-right: 0.15rem;
+        }
+        .visitor-stats-widget .stat-value {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.02em;
+            line-height: 1;
+        }
+        .visitor-stats-widget .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(46, 213, 115, 0.18);
+            border: 1px solid rgba(46, 213, 115, 0.35);
+            padding: 0.35rem 1.2rem 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .visitor-stats-widget .status-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2ed573;
+            box-shadow: 0 0 10px #2ed573;
+            animation: pulse-dot 1.8s infinite;
+        }
+        @keyframes pulse-dot {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .visitor-stats-widget .status-label {
+            font-weight: 400;
+            opacity: 0.8;
+            margin-right: 0.2rem;
+        }
+        .visitor-stats-widget .status-text {
+            font-weight: 600;
+            color: #8ef5b0;
+        }
+        .visitor-stats-widget .reset-visit-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            opacity: 0.7;
+        }
+        .visitor-stats-widget .reset-visit-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .visitor-stats-widget {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 1.2rem;
+                gap: 0.9rem;
+            }
+            .visitor-stats-widget .stat-group {
+                gap: 0.7rem;
+                width: 100%;
+            }
+            .visitor-stats-widget .stat-item {
+                flex: 1 1 auto;
+                padding: 0.4rem 1rem 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            .visitor-stats-widget .stat-value {
+                font-size: 1.1rem;
+            }
+            .visitor-stats-widget .status-badge {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Preloader + Top Bar + Header + Nav: SAME as index.html but nav-link "about" has class="nav-link active" -->
+
+<div id="preloader"><div class="loader"><div class="loader-circle"></div><h3>CLUB HOTEK TSS</h3><p data-i18n="loading">Loading...</p></div></div>
+
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-bar-marquee"><marquee><p data-i18n="welcomeMarquee" style="font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: x-large;">Welcome to CLUB HOTEK TSS, Admission is Ongoing in this upcoming Academic year 🎓🎓🎓</p></marquee></div>
+        <div class="top-bar-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                <div class="lang-dropdown">
+                    <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                    <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                    <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                    <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                    <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                    <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="CLUB HOTEK TSS Logo" onerror="this.style.display='none';">
+            <div class="logo-text"><strong>CLUB HOTEK</strong><span>TSS</span></div>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+            <a href="about.html" class="nav-link active" data-i18n="navAbout">About</a>
+            <a href="trades.html" class="nav-link" data-i18n="navTrades">Trades</a>
+            <a href="performance.html" class="nav-link" data-i18n="navPerformance">Performance</a>
+            <a href="admissions.html" class="nav-link" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" class="nav-link" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" class="nav-link" data-i18n="navFaq">FAQ</a>
+            <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            <div class="mobile-lang-block">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                        <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                        <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                        <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                        <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                        <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                    </div>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- PAGE BANNER -->
+<section class="page-banner" style="background-image: url('assets/images/gallery-1.jpg');">
+    <div class="page-banner-overlay"></div>
+    <div class="container page-banner-content">
+        <nav class="page-breadcrumb"><a href="index.html" data-i18n="navHome">Home</a><span>/</span><span data-i18n="navAbout">About</span></nav>
+        <h1><span data-i18n="aboutWelcome">Welcome to</span> <span>CLUB HOTEK TSS</span></h1>
+        <p data-i18n="aboutTagline">A place where practical skills meet opportunity.</p>
+    </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="section about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+             <img src="assets/images/admission.png"
+     alt="CLUB HOTEK TSS Students"
+     style="width: 100%; height: 600px; object-fit: contain;">
+                <div class="experience-card"><strong>TVET</strong><span data-i18n="aboutExpCard">Practical Education</span></div>
+            </div>
+            <div class="about-content">
+                <span class="mini-title" data-i18n="aboutMiniTitle">PRACTICAL SKILLS FOR BETTER LIFE</span>
+                <h3 data-i18n="aboutHeading">Empowering learners with practical, technical and professional skills.</h3>
+                <p data-i18n="aboutP1">CLUB HOTEK TSS is a Technical and Vocational Education and Training institution committed to providing learners with practical knowledge and skills that prepare them for employment, entrepreneurship and further education.</p>
+                <p data-i18n="aboutP2">Our training focuses on hands-on learning, creativity, professionalism, discipline and innovation.</p>
+                <div class="about-features">
+                    <div><i class="fas fa-check-circle"></i><span data-i18n="aboutF1">Practical Skills</span></div>
+                    <div><i class="fas fa-check-circle"></i><span data-i18n="aboutF2">Professional Training</span></div>
+                    <div><i class="fas fa-check-circle"></i><span data-i18n="aboutF3">Entrepreneurship</span></div>
+                    <div><i class="fas fa-check-circle"></i><span data-i18n="aboutF4">Innovation &amp; Creativity</span></div>
+                </div>
+                <a href="trades.html" class="btn btn-primary"><span data-i18n="aboutBtn">Discover Our Programs</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== VISITOR STATS WIDGET ========== -->
+<div class="container">
+    <div class="visitor-stats-widget" id="visitorStatsWidget">
+        <div class="stat-group">
+            <div class="stat-item">
+                <i class="fas fa-chart-line"></i>
+                <span class="stat-label">Total Visits</span>
+                <span class="stat-value" id="totalVisits">0</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-calendar-day"></i>
+                <span class="stat-label">Today</span>
+                <span class="stat-value" id="todayVisits">0</span>
+            </div>
+        </div>
+        <div class="stat-group" style="gap: 0.8rem;">
+            <div class="status-badge">
+                <span class="dot"></span>
+                <span class="status-label">Status</span>
+                <span class="status-text" id="visitStatus">Online</span>
+            </div>
+            <button class="reset-visit-btn" id="resetVisitsBtn" title="Reset visit counters (local storage)">
+                <i class="fas fa-rotate-left"></i> Reset
+            </button>
+        </div>
+    </div>
+</div>
+<!-- ========== END VISITOR STATS WIDGET ========== -->
+
+<!-- VISION / MISSION / BACKGROUND -->
+<section class="section vmb-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label" data-i18n="vmbLabel">OUR IDENTITY</span>
+            <h2><span data-i18n="vmbHeading1">Vision, Mission &amp;</span> <span data-i18n="vmbHeading2">Background</span></h2>
+            <div class="section-line"></div>
+            <p data-i18n="vmbTagline">Learn about the foundation that drives CLUB HOTEK TSS forward.</p>
+        </div>
+        <div class="vmb-grid">
+            <div class="vmb-card">
+                <div class="vmb-icon"><i class="fas fa-eye"></i></div>
+                <h3 data-i18n="visionTitle">Our Vision</h3>
+                <p data-i18n="visionText">To become a leading TVET institution that produces competent, innovative and professional graduates who contribute to the socio-economic development of Rwanda and beyond.</p>
+            </div>
+            <div class="vmb-card">
+                <div class="vmb-icon"><i class="fas fa-bullseye"></i></div>
+                <h3 data-i18n="missionTitle">Our Mission</h3>
+                <p data-i18n="missionText">To provide quality, practical and market-oriented training that equips learners with the skills, knowledge and attitudes needed for employment, self-employment and lifelong learning.</p>
+            </div>
+            <div class="vmb-card">
+                <div class="vmb-icon"><i class="fas fa-book-open-reader"></i></div>
+                <h3 data-i18n="backgroundTitle">Our Background</h3>
+                <p data-i18n="backgroundText">CLUB HOTEK TSS was established to address the growing demand for practical skills among young people in Rwanda. Located in Gisozi Sector, Gasabo District, the school offers a variety of TVET programs designed to prepare learners for real-world careers and entrepreneurial opportunities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LEADERSHIP TEAM — updated photo styling for face visibility -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">OUR LEADERSHIP</span>
+            <h2>Meet the <span>Team</span></h2>
+            <div class="section-line"></div>
+            <p>Experienced educators and industry professionals guiding our learners to success.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/images/team1.jpeg" alt="Mr. Khalifa Claude - School Director" onerror="this.style.display='none'; this.parentNode.style.background='#e0e0e0';">
+                </div>
+                <div class="team-body"><h3>Mr. Khalifa Claude</h3><div class="team-role">School Director</div><p class="team-bio">15+ years in TVET leadership and education management.</p></div>
+            </div>
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/images/team1.jpeg" alt="Mrs. Alice Uwase - Academic Coordinator" onerror="this.style.display='none'; this.parentNode.style.background='#e0e0e0';">
+                </div>
+                <div class="team-body"><h3>Mrs. Alice Uwase</h3><div class="team-role">Academic Coordinator</div><p class="team-bio">Specialist in competency-based curriculum design.</p></div>
+            </div>
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/images/team1.jpeg" alt="Mr. Eric Habimana - Industry Liaison" onerror="this.style.display='none'; this.parentNode.style.background='#e0e0e0';">
+                </div>
+                <div class="team-body"><h3>Mr. Eric Habimana</h3><div class="team-role">Industry Liaison</div><p class="team-bio">Connects graduates with employers across Rwanda.</p></div>
+            </div>
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="assets/images/team1.jpeg" alt="Ms. Diane Mukamana - Student Affairs" onerror="this.style.display='none'; this.parentNode.style.background='#e0e0e0';">
+                </div>
+                <div class="team-body"><h3>Ms. Diane Mukamana</h3><div class="team-role">Student Affairs</div><p class="team-bio">Supports learners' wellbeing, mentorship and career guidance.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HISTORY TIMELINE -->
+<section class="section" style="background: var(--light);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">OUR JOURNEY</span>
+            <h2>Milestones that <span>Shaped Us</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-year">2018</div><h4>School Founded</h4><p>CLUB HOTEK TSS opens its doors in Gisozi with 3 initial trades.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-year">2020</div><h4>National Accreditation</h4><p>Officially accredited by WDA / RTB and aligned with the national TVET curriculum.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-year">2022</div><h4>Multimedia Program Launch</h4><p>Added Multimedia trade, giving learners access to digital creative careers.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-year">2024</div><h4>Top TVET School – Gasabo</h4><p>Recognized as a leading TVET institution in Gasabo District for excellence.</p></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-year">2026</div><h4>New Campus Facilities</h4><p>Expanded workshops, modern equipment and larger enrolment capacity.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ACCREDITATION -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">ACCREDITATION &amp; PARTNERS</span>
+            <h2>Recognized &amp; <span>Trusted</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="awards-grid">
+            <div class="award-card"><div class="award-icon"><i class="fas fa-certificate"></i></div><h3>WDA Accredited</h3><p>Workforce Development Authority</p></div>
+            <div class="award-card"><div class="award-icon"><i class="fas fa-shield-halved"></i></div><h3>RTB Registered</h3><p>Rwanda TVET Board</p></div>
+            <div class="award-card"><div class="award-icon"><i class="fas fa-graduation-cap"></i></div><h3>National Curriculum</h3><p>Competency-based training</p></div>
+            <div class="award-card"><div class="award-icon"><i class="fas fa-handshake"></i></div><h3>Industry Partners</h3><p>Hotels, garages, salons &amp; studios</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-section">
+    <div class="container stats-grid">
+        <div class="stat-item"><i class="fas fa-book-open"></i><h3 data-count="6">0</h3><p data-i18n="stat1">Main Programs</p></div>
+        <div class="stat-item"><i class="fas fa-user-graduate"></i><h3 data-count="100">0</h3><p data-i18n="stat2">Skills Focused</p></div>
+        <div class="stat-item"><i class="fas fa-tools"></i><h3 data-count="100">0</h3><p data-i18n="stat3">Practical Learning</p></div>
+        <div class="stat-item"><i class="fas fa-lightbulb"></i><h3 data-count="100">0</h3><p data-i18n="stat4">Innovation</p></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo"><div><strong>CLUB HOTEK TSS</strong></div></div>
+            <p><strong>Hitamo neza utegure ejo heza.</strong><br><span data-i18n="footerTagline">Practical Skills for Better Life</span></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/250788301833"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerQuick">Quick Links</h3>
+            <a href="index.html" data-i18n="navHome">Home</a>
+            <a href="about.html" data-i18n="footerAbout">About Us</a>
+            <a href="trades.html" data-i18n="navTrades">Our Trades</a>
+            <a href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerOurTrades">Our Trades</h3>
+            <a href="trades.html" data-i18n="trade1Title">Food &amp; Beverage Operations</a>
+            <a href="trades.html" data-i18n="trade2Title">Automobile Mechanics</a>
+            <a href="trades.html" data-i18n="trade3Title">Culinary Arts</a>
+            <a href="trades.html" data-i18n="trade4Title">Tailoring</a>
+            <a href="trades.html" data-i18n="trade5Title">Hairdressing</a>
+            <a href="trades.html" data-i18n="trade6Title">Multimedia</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerContact">Contact</h3>
+            <p><i class="fas fa-location-dot"></i> Gisozi, Gasabo District</p>
+            <p><i class="fas fa-phone"></i> 0788301833</p>
+            <p><i class="fas fa-phone"></i> 0788627310</p>
+            <p><i class="fas fa-envelope"></i> clubhotek@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-content"><p>Copyright &copy; 2026 CLUB HOTEK TSS. Alright Reserved</p></div></div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toastMessage" data-i18n="toastSuccess">Message sent successfully.</span></div>
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+
+<!-- ========== VISITOR TRACKING SCRIPT ========== -->
+<script>
+    (function() {
+        const STORAGE_KEY_TOTAL = 'clubhotek_total_visits';
+        const STORAGE_KEY_TODAY = 'clubhotek_today_visits';
+        const STORAGE_KEY_LAST_DATE = 'clubhotek_last_visit_date';
+
+        // Helper: get today's date string (YYYY-MM-DD)
+        function getTodayDateString() {
+            const d = new Date();
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // Initialize or update counters
+        function initVisitorCounters() {
+            const todayStr = getTodayDateString();
+            let totalVisits = parseInt(localStorage.getItem(STORAGE_KEY_TOTAL), 10) || 0;
+            let todayVisits = parseInt(localStorage.getItem(STORAGE_KEY_TODAY), 10) || 0;
+            let lastVisitDate = localStorage.getItem(STORAGE_KEY_LAST_DATE) || '';
+
+            // Check if it's a new day
+            if (lastVisitDate !== todayStr) {
+                // New day: reset today's count, but keep total
+                todayVisits = 0;
+                lastVisitDate = todayStr;
+            }
+
+            // Increment for this page visit
+            totalVisits += 1;
+            todayVisits += 1;
+
+            // Save back to localStorage
+            localStorage.setItem(STORAGE_KEY_TOTAL, totalVisits);
+            localStorage.setItem(STORAGE_KEY_TODAY, todayVisits);
+            localStorage.setItem(STORAGE_KEY_LAST_DATE, todayStr);
+
+            // Update DOM
+            const totalEl = document.getElementById('totalVisits');
+            const todayEl = document.getElementById('todayVisits');
+            const statusEl = document.getElementById('visitStatus');
+
+            if (totalEl) totalEl.textContent = totalVisits.toLocaleString();
+            if (todayEl) todayEl.textContent = todayVisits.toLocaleString();
+
+            // Status logic based on today's visits
+            if (statusEl) {
+                if (todayVisits >= 100) {
+                    statusEl.textContent = '🔥 Trending';
+                    statusEl.style.color = '#ffb347';
+                } else if (todayVisits >= 20) {
+                    statusEl.textContent = '📈 Active';
+                    statusEl.style.color = '#7ec8ff';
+                } else if (todayVisits >= 5) {
+                    statusEl.textContent = '👀 Steady';
+                    statusEl.style.color = '#8ef5b0';
+                } else {
+                    statusEl.textContent = '🌱 Growing';
+                    statusEl.style.color = '#8ef5b0';
+                }
+            }
+        }
+
+        // Reset button functionality (clear counters and re-init)
+        function setupResetButton() {
+            const resetBtn = document.getElementById('resetVisitsBtn');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (confirm('Reset visit counters? This will clear local visit data and start fresh.')) {
+                        localStorage.removeItem(STORAGE_KEY_TOTAL);
+                        localStorage.removeItem(STORAGE_KEY_TODAY);
+                        localStorage.removeItem(STORAGE_KEY_LAST_DATE);
+                        // Re-initialize with a fresh visit
+                        initVisitorCounters();
+                    }
+                });
+            }
+        }
+
+        // Run on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                initVisitorCounters();
+                setupResetButton();
+            });
+        } else {
+            initVisitorCounters();
+            setupResetButton();
+        }
+    })();
+</script>
+<!-- ========== END VISITOR TRACKING SCRIPT ========== -->
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissions at CLUB HOTEK TSS - Intake dates, requirements, fees and online application.">
+    <title>Admissions | CLUB HOTEK TSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<!-- Same preloader + top-bar + header with "admissions" active and "admissions.html" selected -->
+
+<div id="preloader"><div class="loader"><div class="loader-circle"></div><h3>CLUB HOTEK TSS</h3><p data-i18n="loading">Loading...</p></div></div>
+
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-bar-marquee"><marquee><p data-i18n="welcomeMarquee" style="font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: x-large;">Welcome to CLUB HOTEK TSS, Admission is Ongoing in this upcoming Academic year 🎓🎓🎓</p></marquee></div>
+        <div class="top-bar-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                <div class="lang-dropdown">
+                    <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                    <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                    <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                    <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                    <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                    <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="CLUB HOTEK TSS Logo" onerror="this.style.display='none';">
+            <div class="logo-text"><strong>CLUB HOTEK</strong><span>TSS</span></div>
+        </a>
+   <!-- 
+        <div class="nav-select-wrap">
+            <select class="nav-select" id="navSelect" aria-label="Quick page jump">
+                <option value="index.html" selected data-i18n="navHome">Home</option>
+                <option value="about.html" data-i18n="navAbout">About</option>
+                <option value="trades.html" data-i18n="navTrades">Trades</option>
+                <option value="performance.html" data-i18n="navPerformance">Performance</option>
+                <option value="admissions.html" data-i18n="navAdmissions">Admissions</option>
+                <option value="gallery.html" data-i18n="navGallery">Gallery</option>
+                <option value="news.html" data-i18n="navNews">News &amp; Events</option>
+                <option value="faq.html" data-i18n="navFaq">FAQ</option>
+                <option value="contact.html" data-i18n="navContact">Contact</option>
+            </select>
+        </div>
+-->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+            <a href="trades.html" class="nav-link" data-i18n="navTrades">Trades</a>
+            <a href="performance.html" class="nav-link" data-i18n="navPerformance">Performance</a>
+            <a href="admissions.html" class="nav-link active" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" class="nav-link" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" class="nav-link" data-i18n="navFaq">FAQ</a>
+            <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            <div class="mobile-lang-block">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                        <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                        <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                        <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                        <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                        <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                    </div>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="page-banner" style="background-image: url('assets/images/admission1.png');">
+    <div class="page-banner-overlay"></div>
+    <div class="container page-banner-content">
+        <nav class="page-breadcrumb"><a href="index.html" data-i18n="navHome">Home</a><span>/</span><span data-i18n="navAdmissions">Admissions</span></nav>
+        <h1><span data-i18n="admHeading1">Start Your</span> <span data-i18n="admHeading2">Career Journey</span> <span data-i18n="admHeading3">Today.</span></h1>
+        <p data-i18n="admDesc">Choose a practical TVET program and prepare yourself for employment, entrepreneurship and a better future.</p>
+    </div>
+</section>
+
+<!-- INTAKE DATES -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">ACADEMIC CALENDAR</span>
+            <h2>Intake <span>Dates</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="intake-grid">
+            <div class="intake-card"><h3>January Intake</h3><div class="intake-date">05 Jan 2026</div><p>Applications open 01 Nov – 20 Dec 2025.</p><span class="intake-badge">Open</span></div>
+            <div class="intake-card"><h3>May Intake</h3><div class="intake-date">04 May 2026</div><p>Applications open 01 Mar – 20 Apr 2026.</p><span class="intake-badge">Upcoming</span></div>
+            <div class="intake-card"><h3>September Intake</h3><div class="intake-date">07 Sep 2026</div><p>Applications open 01 Jul – 25 Aug 2026.</p><span class="intake-badge">Upcoming</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="admission-section">
+    <div class="container admission-grid">
+        <div class="admission-content">
+            <span class="section-label light" data-i18n="admLabel">ADMISSIONS</span>
+            <h2><span data-i18n="admHeading1">Start Your</span> <span data-i18n="admHeading2">Career Journey</span> <span data-i18n="admHeading3">Today.</span></h2>
+            <p data-i18n="admDesc">Choose a practical TVET program and prepare yourself for employment, entrepreneurship and a better future.</p>
+            <div class="admission-points">
+                <div><i class="fas fa-circle-check"></i><span data-i18n="admP1">Practical training</span></div>
+                <div><i class="fas fa-circle-check"></i><span data-i18n="admP2">Career-oriented programs</span></div>
+                <div><i class="fas fa-circle-check"></i><span data-i18n="admP3">Skills development</span></div>
+                <div><i class="fas fa-circle-check"></i><span data-i18n="admP4">Entrepreneurship opportunities</span></div>
+            </div>
+        </div>
+
+       
+        <div class="application-card">
+            <div class="application-header">
+                <h3>Food & Beverage Operations</h3>
+           Food & Beverage Operations refers to the activities involved in preparing, serving, selling, and managing food and drinks in hospitality establishments such as hotels, restaurants, cafés, bars, catering companies, and resorts.
+                </div>
+            <div class="application-header">
+                <h3>Automobile Mechanics</h3>
+           Automobile Mechanics is the field of study and technical work concerned with the inspection, maintenance, diagnosis, repair, and servicing of motor vehicles.
+                </div>
+
+                <div class="application-header">
+                <h3>Culinary Arts</h3>
+           Culinary Arts is the field of study and practical work focused on the preparation, cooking, presentation, and service of food in restaurants, hotels, catering businesses, and other food-service establishments.
+                </div>
+                  <div class="application-header">
+                <h3>Culinary Arts</h3>
+           Culinary Arts is the field of study and practical work focused on the preparation, cooking, presentation, and service of food in restaurants, hotels, catering businesses, and other food-service establishments.
+                </div>
+
+        </div>
+    </div>
+    
+
+
+
+
+</section>
+
+<!-- REQUIREMENTS PDF -->
+<section class="section requirements-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">REQUIREMENTS</span>
+            <h2>Admission <span>Requirements</span></h2>
+            <div class="section-line"></div>
+            <p>Download or preview the full registration requirements document.</p>
+        </div>
+        <div class="requirements-grid">
+            <div class="requirements-card">
+                <div class="requirements-icon"><i class="fas fa-file-pdf"></i></div>
+                <h3>Registration Requirements 2026</h3>
+                <p>Complete guide to documents, eligibility and steps for enrolling at CLUB HOTEK TSS.</p>
+                <div class="requirements-meta">
+                    <span><i class="fas fa-file"></i> <strong>PDF</strong> Document</span>
+                    <span><i class="fas fa-database"></i> <strong>1.8 MB</strong></span>
+                    <span><i class="fas fa-calendar"></i> Updated <strong>Jan 2026</strong></span>
+                </div>
+                <div class="requirements-actions">
+                    <a href="assets/files/requirements.pdf" class="btn btn-primary" download><i class="fas fa-download"></i> Download PDF</a>
+                    <a href="assets/files/requirements.pdf" class="btn btn-outline-dark" target="_blank"><i class="fas fa-up-right-from-square"></i> Open in New Tab</a>
+                </div>
+                <p class="requirements-note"><i class="fas fa-circle-info"></i> Includes required documents, age limits, language requirements and application steps.</p>
+            </div>
+            <div class="requirements-preview">
+                <div class="preview-header"><i class="fas fa-file-pdf"></i> requirements.pdf — Preview</div>
+                <div class="preview-body">
+                    <iframe src="assets/files/requirements.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Registration Requirements PDF preview"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEE TABLE -->
+
+<!--
+<section class="section" style="background: var(--light);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">TUITION &amp; FEES</span>
+            <h2>Transparent <span>Fee Structure</span></h2>
+            <div class="section-line"></div>
+            <p>Affordable TVET education with flexible payment options.</p>
+        </div>
+        <div class="fee-table-wrap">
+            <table class="fee-table">
+                <thead><tr><th>Program</th><th>Level</th><th>Duration</th><th>Tuition / Year</th><th>Registration</th></tr></thead>
+                <tbody>
+                    <tr><td>Food &amp; Beverage Operations</td><td>Level 3 – 5</td><td>1 – 3 years</td><td><strong>RWF 180,000</strong></td><td>RWF 15,000</td></tr>
+                    <tr><td>Automobile Mechanics</td><td>Level 1</td><td>1 year</td><td><strong>RWF 150,000</strong></td><td>RWF 15,000</td></tr>
+                    <tr><td>Culinary Arts</td><td>Level 1</td><td>1 year</td><td><strong>RWF 160,000</strong></td><td>RWF 15,000</td></tr>
+                    <tr><td>Tailoring</td><td>Level 1</td><td>1 year</td><td><strong>RWF 140,000</strong></td><td>RWF 15,000</td></tr>
+                    <tr><td>Hairdressing</td><td>Level 1</td><td>1 year</td><td><strong>RWF 140,000</strong></td><td>RWF 15,000</td></tr>
+                    <tr><td>Multimedia</td><td>Level 1</td><td>1 year</td><td><strong>RWF 170,000</strong></td><td>RWF 15,000</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+-->
+<!-- Footer (same) -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo"><div><strong>CLUB HOTEK TSS</strong></div></div>
+            <p><strong>Hitamo neza utegure ejo heza.</strong><br><span data-i18n="footerTagline">Practical Skills for Better Life</span></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/250788301833"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerQuick">Quick Links</h3>
+            <a href="index.html" data-i18n="navHome">Home</a>
+            <a href="about.html" data-i18n="footerAbout">About Us</a>
+            <a href="trades.html" data-i18n="navTrades">Our Trades</a>
+            <a href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerOurTrades">Our Trades</h3>
+            <a href="trades.html" data-i18n="trade1Title">Food &amp; Beverage Operations</a>
+            <a href="trades.html" data-i18n="trade2Title">Automobile Mechanics</a>
+            <a href="trades.html" data-i18n="trade3Title">Culinary Arts</a>
+            <a href="trades.html" data-i18n="trade4Title">Tailoring</a>
+            <a href="trades.html" data-i18n="trade5Title">Hairdressing</a>
+            <a href="trades.html" data-i18n="trade6Title">Multimedia</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerContact">Contact</h3>
+            <p><i class="fas fa-location-dot"></i> Gisozi, Gasabo District</p>
+            <p><i class="fas fa-phone"></i> 0788301833</p>
+            <p><i class="fas fa-phone"></i> 0788627310</p>
+            <p><i class="fas fa-envelope"></i> clubhotek@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-content"><p>Copyright &copy; 2026 CLUB HOTEK TSS. Alright Reserved</p></div></div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toastMessage" data-i18n="toastSuccess">Message sent successfully.</span></div>
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

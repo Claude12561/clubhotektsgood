@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Student Performance at CLUB HOTEK TSS - Exam pass rates, employment rates, awards and testimonials.">
+
+    <title>Student Performance | CLUB HOTEK TSS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- ==========================================
+         TESTIMONIAL PHOTO CSS
+         ========================================== -->
+    <style>
+
+        /* Student testimonial photo container */
+        .testimonial-photo {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background: #eef3f8;
+        }
+
+        /* Student testimonial image */
+        .testimonial-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        /* Image hover effect */
+        .testimonial-card:hover .testimonial-photo img {
+            transform: scale(1.05);
+        }
+
+        /* Make testimonial card look better */
+        .testimonial-card {
+            overflow: hidden;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .testimonial-photo {
+                height: 230px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .testimonial-photo {
+                height: 220px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     PRELOADER
+     ========================================== -->
+
+<div id="preloader">
+
+    <div class="loader">
+
+        <div class="loader-circle"></div>
+
+        <h3>CLUB HOTEK TSS</h3>
+
+        <p data-i18n="loading">
+            Loading...
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     TOP BAR
+     ========================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <div class="top-bar-marquee">
+
+            <marquee>
+
+                <p data-i18n="welcomeMarquee"
+                   style="font-family: Arial, Helvetica, sans-serif;
+                          font-style: oblique;
+                          font-size: x-large;">
+
+                    Welcome to CLUB HOTEK TSS,
+                    Admission is Ongoing in this upcoming Academic year 🎓🎓🎓
+
+                </p>
+
+            </marquee>
+
+        </div>
+
+
+        <div class="top-bar-actions">
+
+            <div class="lang-switcher" id="langSwitcher">
+
+                <button class="lang-btn" type="button">
+
+                    <i class="fas fa-globe"></i>
+
+                    <span data-current-lang>
+                        English
+                    </span>
+
+                    <i class="fas fa-chevron-down caret"></i>
+
+                </button>
+
+
+                <div class="lang-dropdown">
+
+                    <button class="lang-option active"
+                            data-lang="en"
+                            type="button">
+
+                        <span class="flag">🇬🇧</span>
+                        English
+
+                    </button>
+
+
+                    <button class="lang-option"
+                            data-lang="fr"
+                            type="button">
+
+                        <span class="flag">🇫🇷</span>
+                        Français
+
+                    </button>
+
+
+                    <button class="lang-option"
+                            data-lang="sw"
+                            type="button">
+
+                        <span class="flag">🇹🇿</span>
+                        Kiswahili
+
+                    </button>
+
+
+                    <button class="lang-option"
+                            data-lang="rw"
+                            type="button">
+
+                        <span class="flag">🇷🇼</span>
+                        Kinyarwanda
+
+                    </button>
+
+
+                    <button class="lang-option"
+                            data-lang="es"
+                            type="button">
+
+                        <span class="flag">🇪🇸</span>
+                        Español
+
+                    </button>
+
+
+                    <button class="lang-option"
+                            data-lang="it"
+                            type="button">
+
+                        <span class="flag">🇮🇹</span>
+                        Italiano
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     HEADER / NAVIGATION
+     ========================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="logo">
+
+            <img src="assets/images/logo.png"
+                 alt="CLUB HOTEK TSS Logo"
+                 onerror="this.style.display='none';">
+
+            <div class="logo-text">
+
+                <strong>
+                    CLUB HOTEK
+                </strong>
+
+                <span>
+                    TSS
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Mobile / Select Navigation -->
+
+   <!-- 
+        <div class="nav-select-wrap">
+            <select class="nav-select" id="navSelect" aria-label="Quick page jump">
+                <option value="index.html" selected data-i18n="navHome">Home</option>
+                <option value="about.html" data-i18n="navAbout">About</option>
+                <option value="trades.html" data-i18n="navTrades">Trades</option>
+                <option value="performance.html" data-i18n="navPerformance">Performance</option>
+                <option value="admissions.html" data-i18n="navAdmissions">Admissions</option>
+                <option value="gallery.html" data-i18n="navGallery">Gallery</option>
+                <option value="news.html" data-i18n="navNews">News &amp; Events</option>
+                <option value="faq.html" data-i18n="navFaq">FAQ</option>
+                <option value="contact.html" data-i18n="navContact">Contact</option>
+            </select>
+        </div>
+-->
+
+        <!-- Mobile Menu -->
+
+        <button class="mobile-menu-btn"
+                id="mobileMenuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <!-- Navigation -->
+
+        <nav class="navbar" id="navbar">
+
+            <a href="index.html"
+               class="nav-link"
+               data-i18n="navHome">
+
+                Home
+
+            </a>
+
+
+            <a href="about.html"
+               class="nav-link"
+               data-i18n="navAbout">
+
+                About
+
+            </a>
+
+
+            <a href="trades.html"
+               class="nav-link"
+               data-i18n="navTrades">
+
+                Trades
+
+            </a>
+
+
+            <a href="performance.html"
+               class="nav-link active"
+               data-i18n="navPerformance">
+
+                Performance
+
+            </a>
+
+
+            <a href="admissions.html"
+               class="nav-link"
+               data-i18n="navAdmissions">
+
+                Admissions
+
+            </a>
+
+
+            <a href="gallery.html"
+               class="nav-link"
+               data-i18n="navGallery">
+
+                Gallery
+
+            </a>
+
+
+            <a href="news.html"
+               class="nav-link"
+               data-i18n="navNews">
+
+                News &amp; Events
+
+            </a>
+
+
+            <a href="faq.html"
+               class="nav-link"
+               data-i18n="navFaq">
+
+                FAQ
+
+            </a>
+
+
+            <a href="contact.html"
+               class="nav-link"
+               data-i18n="navContact">
+
+                Contact
+
+            </a>
+
+
+            <!-- Mobile Language -->
+
+            <div class="mobile-lang-block">
+
+                <div class="lang-switcher"
+                     id="langSwitcherMobile">
+
+                    <button class="lang-btn"
+                            type="button">
+
+                        <i class="fas fa-globe"></i>
+
+                        <span data-current-lang>
+                            English
+                        </span>
+
+                        <i class="fas fa-chevron-down caret"></i>
+
+                    </button>
+
+
+                    <div class="lang-dropdown">
+
+                        <button class="lang-option active"
+                                data-lang="en"
+                                type="button">
+
+                            <span class="flag">🇬🇧</span>
+                            English
+
+                        </button>
+
+
+                        <button class="lang-option"
+                                data-lang="fr"
+                                type="button">
+
+                            <span class="flag">🇫🇷</span>
+                            Français
+
+                        </button>
+
+
+                        <button class="lang-option"
+                                data-lang="sw"
+                                type="button">
+
+                            <span class="flag">🇹🇿</span>
+                            Kiswahili
+
+                        </button>
+
+
+                        <button class="lang-option"
+                                data-lang="rw"
+                                type="button">
+
+                            <span class="flag">🇷🇼</span>
+                            Kinyarwanda
+
+                        </button>
+
+
+                        <button class="lang-option"
+                                data-lang="es"
+                                type="button">
+
+                            <span class="flag">🇪🇸</span>
+                            Español
+
+                        </button>
+
+
+                        <button class="lang-option"
+                                data-lang="it"
+                                type="button">
+
+                            <span class="flag">🇮🇹</span>
+                            Italiano
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dark / Light Mode -->
+
+            <button id="themeToggle"
+                    class="theme-toggle">
+
+                <i class="fas fa-moon"></i>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+
+<!-- ==========================================
+     PAGE BANNER
+     ========================================== -->
+
+<section class="page-banner"
+         style="background-image: url('assets/images/gallery-5.jpg');">
+
+    <div class="page-banner-overlay"></div>
+
+    <div class="container page-banner-content">
+
+        <nav class="page-breadcrumb">
+
+            <a href="index.html"
+               data-i18n="navHome">
+
+                Home
+
+            </a>
+
+            <span>/</span>
+
+            <span data-i18n="navPerformance">
+                Performance
+            </span>
+
+        </nav>
+
+
+        <h1>
+
+            <span data-i18n="perfHeading1">
+                Our Students'
+            </span>
+
+            <span data-i18n="perfHeading2">
+                Achievements
+            </span>
+
+        </h1>
+
+
+        <p data-i18n="perfTagline">
+
+            A snapshot of our learners' success across
+            trades and academic years.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     PERFORMANCE SECTION
+     ========================================== -->
+
+<section class="performance-section"
+         id="performance">
+
+    <div class="container">
+
+
+        <!-- PERFORMANCE KPIs -->
+
+        <div class="performance-kpis">
+
+
+            <!-- KPI 1 -->
+
+            <div class="performance-kpi">
+
+                <i class="fas fa-trophy"></i>
+
+                <div class="kpi-number"
+                     data-count="92">
+
+                    0
+
+                </div>
+
+                <div class="kpi-label"
+                     data-i18n="perfKpi1">
+
+                    National Exam Pass Rate (%)
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI 2 -->
+
+            <div class="performance-kpi">
+
+                <i class="fas fa-briefcase"></i>
+
+                <div class="kpi-number"
+                     data-count="78">
+
+                    0
+
+                </div>
+
+                <div class="kpi-label"
+                     data-i18n="perfKpi2">
+
+                    Graduate Employment (%)
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI 3 -->
+
+            <div class="performance-kpi">
+
+                <i class="fas fa-medal"></i>
+
+                <div class="kpi-number"
+                     data-count="15">
+
+                    0
+
+                </div>
+
+                <div class="kpi-label"
+                     data-i18n="perfKpi3">
+
+                    Skills Competition Awards
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI 4 -->
+
+            <div class="performance-kpi">
+
+                <i class="fas fa-star"></i>
+
+                <div class="kpi-number"
+                     data-count="96">
+
+                    0
+
+                </div>
+
+                <div class="kpi-label"
+                     data-i18n="perfKpi4">
+
+                    Student Satisfaction (%)
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             PERFORMANCE BY TRADE
+             ========================================== -->
+
+        <div class="performance-grid">
+
+
+            <!-- FOOD & BEVERAGE -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-utensils"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade1">
+                        Food &amp; Beverage Operations
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="94">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill"
+                             data-width="94">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="82">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="82">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUTOMOBILE MECHANICS -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-car"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade2">
+                        Automobile Mechanics
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="89">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill"
+                             data-width="89">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="75">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="75">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CULINARY ARTS -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-cheese"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade3">
+                        Culinary Arts
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="96">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill green"
+                             data-width="96">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="85">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="85">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TAILORING -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-scissors"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade4">
+                        Tailoring
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="91">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill"
+                             data-width="91">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="79">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="79">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HAIRDRESSING -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-spa"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade5">
+                        Hairdressing
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="90">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill purple"
+                             data-width="90">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="73">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="73">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MULTIMEDIA -->
+
+            <div class="performance-card">
+
+                <div class="performance-card-header">
+
+                    <div class="performance-card-icon">
+
+                        <i class="fas fa-photo-film"></i>
+
+                    </div>
+
+                    <h3 data-i18n="perfTrade6">
+                        Multimedia
+                    </h3>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfPassRate">
+                            Pass Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="93">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill"
+                             data-width="93">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-stat-row">
+
+                    <div class="performance-stat-label">
+
+                        <span data-i18n="perfEmployment">
+                            Employment Rate
+                        </span>
+
+                        <span class="performance-stat-value"
+                              data-count="80">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="performance-bar">
+
+                        <div class="performance-bar-fill gold"
+                             data-width="80">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     AWARDS
+     ========================================== -->
+
+<section class="section"
+         style="background: var(--light);">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                RECOGNITION
+            </span>
+
+            <h2>
+                Our <span>Awards</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="awards-grid">
+
+
+            <!-- Award 1 -->
+
+            <div class="award-card">
+
+                <div class="award-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+                <h3>
+                    Top TVET School
+                </h3>
+
+                <p>
+                    Gasabo District 2024–2025
+                </p>
+
+            </div>
+
+
+            <!-- Award 2 -->
+
+            <div class="award-card">
+
+                <div class="award-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+
+                <h3>
+                    National Skills
+                </h3>
+
+                <p>
+                    Culinary Arts Finalist 2025
+                </p>
+
+            </div>
+
+
+            <!-- Award 3 -->
+
+            <div class="award-card">
+
+                <div class="award-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <h3>
+                    Excellence Award
+                </h3>
+
+                <p>
+                    Multimedia Innovation 2025
+                </p>
+
+            </div>
+
+
+            <!-- Award 4 -->
+
+            <div class="award-card">
+
+                <div class="award-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <h3>
+                    Community Impact
+                </h3>
+
+                <p>
+                    Skills Outreach Program 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     STUDENT TESTIMONIALS
+     ========================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <!-- Section heading -->
+
+        <div class="section-header">
+
+            <span class="section-label">
+                VOICES
+            </span>
+
+            <h2>
+                Student <span>Testimonials</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+
+        <!-- ==========================================
+             TESTIMONIAL CARDS
+             ========================================== -->
+
+        <div class="testimonials-grid">
+
+
+            <!-- ======================================
+                 STUDENT 1 - ALINE
+                 ====================================== -->
+
+            <div class="testimonial-card">
+
+
+                <!--
+                =========================================
+                ADD STUDENT PHOTO HERE
+
+                Put the image in:
+
+                assets/images/student-testimonial-1.jpg
+
+                You can replace .jpg with .png or .webp
+                if you also change the filename below.
+                =========================================
+                -->
+
+                <div class="testimonial-photo">
+
+                    <img src="assets/images/testimonal1.jpg"
+                         alt="Aline M. - Culinary Arts Graduate"
+                         loading="lazy">
+
+                </div>
+
+
+                <!-- Quote -->
+
+                <div class="testimonial-quote">
+                    "
+                </div>
+
+
+                <!-- Testimonial -->
+
+                <p class="testimonial-text">
+
+                    CLUB HOTEK TSS gave me practical skills I use every day
+                    as a chef. The kitchen training was excellent.
+
+                </p>
+
+
+                <!-- Student information -->
+
+                <div class="testimonial-author">
+
+                    <div class="testimonial-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Aline M.
+                        </strong>
+
+                        <span>
+                            Culinary Arts Graduate
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ======================================
+                 STUDENT 2 - JEAN-CLAUDE
+                 ====================================== -->
+
+            <div class="testimonial-card">
+
+
+                <!--
+                =========================================
+                ADD STUDENT PHOTO HERE
+
+                Put the image in:
+
+                assets/images/student-testimonial-2.jpg
+                =========================================
+                -->
+
+                <div class="testimonial-photo">
+
+                    <img src="assets/images/team1.jpeg"
+                         alt="Jean-Claude K. - Tailoring Graduate"
+                         loading="lazy">
+
+                </div>
+
+
+                <!-- Quote -->
+
+                <div class="testimonial-quote">
+                    "
+                </div>
+
+
+                <!-- Testimonial -->
+
+                <p class="testimonial-text">
+
+                    I opened my own tailoring shop two months after
+                    graduation. The business skills module was invaluable.
+
+                </p>
+
+
+                <!-- Student information -->
+
+                <div class="testimonial-author">
+
+                    <div class="testimonial-avatar">
+                        J
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Jean-Claude K.
+                        </strong>
+
+                        <span>
+                            Tailoring Graduate
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ======================================
+                 STUDENT 3 - DIANE
+                 ====================================== -->
+
+            <div class="testimonial-card">
+
+
+                <!--
+                =========================================
+                ADD STUDENT PHOTO HERE
+
+                Put the image in:
+
+                assets/images/student-testimonial-3.jpg
+                =========================================
+                -->
+
+                <div class="testimonial-photo">
+
+                    <img src="assets/images/testimonal3.jpg"
+                         alt="Diane U. - Multimedia Graduate"
+                         loading="lazy">
+
+                </div>
+
+
+                <!-- Quote -->
+
+                <div class="testimonial-quote">
+                    "
+                </div>
+
+
+                <!-- Testimonial -->
+
+                <p class="testimonial-text">
+
+                    The Multimedia program opened doors to freelance design
+                    work. I now work with clients across Kigali.
+
+                </p>
+
+
+                <!-- Student information -->
+
+                <div class="testimonial-author">
+
+                    <div class="testimonial-avatar">
+                        D
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Diane U.
+                        </strong>
+
+                        <span>
+                            Multimedia Graduate
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- Footer About -->
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+
+                <div>
+
+                    <strong>
+                        CLUB HOTEK TSS
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p>
+
+                <strong>
+                    Hitamo neza utegure ejo heza.
+                </strong>
+
+                <br>
+
+                <span data-i18n="footerTagline">
+                    Practical Skills for Better Life
+                </span>
+
+            </p>
+
+
+            <!-- Social media -->
+
+            <div class="footer-social">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/250788301833">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3 data-i18n="footerQuick">
+                Quick Links
+            </h3>
+
+            <a href="index.html"
+               data-i18n="navHome">
+
+                Home
+
+            </a>
+
+            <a href="about.html"
+               data-i18n="footerAbout">
+
+                About Us
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="navTrades">
+
+                Our Trades
+
+            </a>
+
+            <a href="admissions.html"
+               data-i18n="navAdmissions">
+
+                Admissions
+
+            </a>
+
+            <a href="gallery.html"
+               data-i18n="navGallery">
+
+                Gallery
+
+            </a>
+
+            <a href="news.html"
+               data-i18n="navNews">
+
+                News &amp; Events
+
+            </a>
+
+            <a href="faq.html"
+               data-i18n="navFaq">
+
+                FAQ
+
+            </a>
+
+        </div>
+
+
+        <!-- Our Trades -->
+
+        <div class="footer-column">
+
+            <h3 data-i18n="footerOurTrades">
+                Our Trades
+            </h3>
+
+            <a href="trades.html"
+               data-i18n="trade1Title">
+
+                Food &amp; Beverage Operations
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="trade2Title">
+
+                Automobile Mechanics
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="trade3Title">
+
+                Culinary Arts
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="trade4Title">
+
+                Tailoring
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="trade5Title">
+
+                Hairdressing
+
+            </a>
+
+            <a href="trades.html"
+               data-i18n="trade6Title">
+
+                Multimedia
+
+            </a>
+
+        </div>
+
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3 data-i18n="footerContact">
+                Contact
+            </h3>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Gisozi, Gasabo District
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                0788301833
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                0788627310
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                clubhotek@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-content">
+
+            <p>
+                Copyright &copy; 2026 CLUB HOTEK TSS
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     TOAST MESSAGE
+     ========================================== -->
+
+<div class="toast" id="toast">
+
+    <i class="fas fa-circle-check"></i>
+
+    <span id="toastMessage"
+          data-i18n="toastSuccess">
+
+        Message sent successfully.
+
+    </span>
+
+</div>
+
+
+<!-- Scroll to Top -->
+
+<button id="scrollTop"
+        class="scroll-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+     ========================================== -->
+
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+
+</body>
+</html>

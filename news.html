@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News & Events at CLUB HOTEK TSS - Recent posts, achievements, competitions and campus updates.">
+    <title>News &amp; Events | CLUB HOTEK TSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        /* additional small style to ensure modal content scrolls nicely */
+        .post-modal-content-text {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        .post-modal-content-text p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .post-modal-content-text h4 {
+            margin: 1.2rem 0 0.5rem;
+            font-weight: 600;
+        }
+        .post-item {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .post-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+        .post-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary, #0d6efd);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 6px;
+            transition: gap 0.2s;
+        }
+        .post-item:hover .post-more {
+            gap: 12px;
+        }
+        .recent-post-item {
+            cursor: pointer;
+            transition: background 0.2s;
+            border-radius: 6px;
+            padding: 6px 8px;
+        }
+        .recent-post-item:hover {
+            background: rgba(0,0,0,0.03);
+        }
+        .post-modal-category {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="preloader"><div class="loader"><div class="loader-circle"></div><h3>CLUB HOTEK TSS</h3><p data-i18n="loading">Loading...</p></div></div>
+
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-bar-marquee"><marquee><p data-i18n="welcomeMarquee" style="font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: x-large;">Welcome to CLUB HOTEK TSS, Admission is Ongoing in this upcoming Academic year 🎓🎓🎓</p></marquee></div>
+        <div class="top-bar-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                <div class="lang-dropdown">
+                    <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                    <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                    <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                    <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                    <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                    <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="CLUB HOTEK TSS Logo" onerror="this.style.display='none';">
+            <div class="logo-text"><strong>CLUB HOTEK</strong><span>TSS</span></div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+            <a href="trades.html" class="nav-link" data-i18n="navTrades">Trades</a>
+            <a href="performance.html" class="nav-link" data-i18n="navPerformance">Performance</a>
+            <a href="admissions.html" class="nav-link" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" class="nav-link active" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" class="nav-link" data-i18n="navFaq">FAQ</a>
+            <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            <div class="mobile-lang-block">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                        <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                        <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                        <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                        <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                        <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                    </div>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="page-banner" style="background-image: url('assets/images/graduation1.png');">
+    <div class="page-banner-overlay"></div>
+    <div class="container page-banner-content">
+        <nav class="page-breadcrumb"><a href="index.html" data-i18n="navHome">Home</a><span>/</span><span data-i18n="navNews">News &amp; Events</span></nav>
+        <h1 data-i18n="newsTitle">Recent Posts</h1>
+        <p>School news, events, achievements and announcements.</p>
+    </div>
+</section>
+
+<section class="section news-section">
+    <div class="container">
+        <div class="news-grid">
+            <div class="news-main">
+                <h1 class="news-page-title" data-i18n="newsTitle">Recent Posts</h1>
+
+                <!-- Post 1 -->
+                <article class="post-item" data-title="CLUB HOTEK TSS Strengthens Community Support Through Skills Program" data-date="11 May 2026" data-image="assets/images/gallery-1.jpg" data-category="Community">
+                    <div class="post-thumb"><img src="assets/images/gallery-1.jpg" alt="Community Support"></div>
+                    <div class="post-body">
+                        <h3 class="post-title" data-i18n="post1Title">CLUB HOTEK TSS Strengthens Community Support Through Skills Program</h3>
+                        <p class="post-excerpt" data-i18n="post1Excerpt">On 11 May 2026, CLUB HOTEK TSS once again demonstrated its strong commitment to empowering young people through practical, community-focused skills training...</p>
+                        <span class="post-more"><span data-i18n="readMore">Read More</span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-item" data-title="CLUB HOTEK TSS Celebrates a Colorful and Inspiring Cultural Day" data-date="24 February 2026" data-image="assets/images/gallery-2.jpg" data-category="Events">
+                    <div class="post-thumb"><img src="assets/images/gallery-2.jpg" alt="Cultural Day"></div>
+                    <div class="post-body">
+                        <h3 class="post-title" data-i18n="post2Title">CLUB HOTEK TSS Celebrates a Colorful and Inspiring Cultural Day</h3>
+                        <p class="post-excerpt" data-i18n="post2Excerpt">CLUB HOTEK TSS was filled with excitement, color, and joy on Friday, 24th February as students, staff and parents gathered for the annual Cultural Day celebration...</p>
+                        <span class="post-more"><span data-i18n="readMore">Read More</span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-item" data-title="CLUB HOTEK TSS Awarded Top TVET School in Gasabo for 2024–2025" data-date="19 January 2026" data-image="assets/images/gallery-3.jpg" data-category="Achievements">
+                    <div class="post-thumb"><img src="assets/images/gallery-3.jpg" alt="Award Ceremony"></div>
+                    <div class="post-body">
+                        <h3 class="post-title" data-i18n="post3Title">CLUB HOTEK TSS Awarded Top TVET School in Gasabo for 2024–2025</h3>
+                        <p class="post-excerpt" data-i18n="post3Excerpt">CLUB HOTEK TSS is proud to announce that it has been officially recognized as one of the leading TVET institutions in Gasabo District for the 2024–2025 academic year...</p>
+                        <span class="post-more"><span data-i18n="readMore">Read More</span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="post-item" data-title="New Multimedia Workshop Officially Opened" data-date="15 December 2025" data-image="assets/images/multimedia.jpg" data-category="Campus">
+                    <div class="post-thumb"><img src="assets/images/multimedia.jpg" alt="Multimedia Workshop"></div>
+                    <div class="post-body">
+                        <h3 class="post-title" data-i18n="post4Title">New Multimedia Workshop Officially Opened</h3>
+                        <p class="post-excerpt" data-i18n="post4Excerpt">CLUB HOTEK TSS has officially opened a brand-new Multimedia Workshop equipped with modern cameras, computers and design software to enhance creativity and hands-on learning...</p>
+                        <span class="post-more"><span data-i18n="readMore">Read More</span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="post-item" data-title="Students Shine in National Skills Competition" data-date="02 November 2025" data-image="assets/images/gallery-5.jpg" data-category="Competitions">
+                    <div class="post-thumb"><img src="assets/images/gallery-5.jpg" alt="Skills Competition"></div>
+                    <div class="post-body">
+                        <h3 class="post-title" data-i18n="post5Title">Students Shine in National Skills Competition</h3>
+                        <p class="post-excerpt" data-i18n="post5Excerpt">A team of CLUB HOTEK TSS students represented the school with pride at the National TVET Skills Competition, showcasing outstanding talent in culinary arts, tailoring and multimedia...</p>
+                        <span class="post-more"><span data-i18n="readMore">Read More</span><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="news-sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title" data-i18n="recentPosts">RECENT POSTS</h3>
+                    <ul class="recent-posts-list">
+                        <li class="recent-post-item" data-title="CLUB HOTEK TSS Strengthens Community Support Through Skills Program" data-date="11 May 2026" data-image="assets/images/gallery-1.jpg" data-category="Community">
+                            <img src="assets/images/gallery-1.jpg" alt="Community Support">
+                            <div><span class="rp-title" data-i18n="post1Title">CLUB HOTEK TSS Strengthens Community Support Through Skills Program</span><span class="rp-meta">May 11, 2026</span></div>
+                        </li>
+                        <li class="recent-post-item" data-title="CLUB HOTEK TSS Celebrates a Colorful and Inspiring Cultural Day" data-date="24 February 2026" data-image="assets/images/gallery-2.jpg" data-category="Events">
+                            <img src="assets/images/gallery-2.jpg" alt="Cultural Day">
+                            <div><span class="rp-title" data-i18n="post2Title">CLUB HOTEK TSS Celebrates a Colorful and Inspiring Cultural Day</span><span class="rp-meta">February 24, 2026</span></div>
+                        </li>
+                        <li class="recent-post-item" data-title="CLUB HOTEK TSS Awarded Top TVET School in Gasabo" data-date="19 January 2026" data-image="assets/images/gallery-3.jpg" data-category="Achievements">
+                            <img src="assets/images/gallery-3.jpg" alt="Award Ceremony">
+                            <div><span class="rp-title" data-i18n="post3Title">CLUB HOTEK TSS Awarded Top TVET School in Gasabo for 2024–2025</span><span class="rp-meta">January 19, 2026</span></div>
+                        </li>
+                        <li class="recent-post-item" data-title="New Multimedia Workshop Officially Opened" data-date="15 December 2025" data-image="assets/images/multimedia.jpg" data-category="Campus">
+                            <img src="assets/images/multimedia.jpg" alt="Multimedia Workshop">
+                            <div><span class="rp-title" data-i18n="post4Title">New Multimedia Workshop Officially Opened</span><span class="rp-meta">December 15, 2025</span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title" data-i18n="categories">CATEGORIES</h3>
+                    <ul class="categories-list">
+                        <li><a href="news.html" data-i18n="catCommunity">Community</a></li>
+                        <li><a href="news.html" data-i18n="catEvents">Events</a></li>
+                        <li><a href="news.html" data-i18n="catAchievements">Achievements</a></li>
+                        <li><a href="news.html" data-i18n="catCampus">Campus</a></li>
+                        <li><a href="news.html" data-i18n="catCompetitions">Competitions</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title" data-i18n="tags">TAGS</h3>
+                    <div class="tags-cloud">
+                        <span>TVET</span><span>Skills</span><span>Community</span><span>Rwanda</span>
+                        <span>Multimedia</span><span>Culinary</span><span>Tailoring</span><span>Automobile</span>
+                        <span>Hairdressing</span><span>Gisozi</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-strip">
+    <div class="container newsletter-inner">
+        <div>
+            <h3 data-i18n="newsletterTitle">Stay Updated with CLUB HOTEK TSS</h3>
+            <p data-i18n="newsletterText">Subscribe to receive admissions news, events and program updates directly in your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" data-i18n-placeholder="newsletterPlaceholder" required>
+            <button type="submit" data-i18n="newsletterBtn">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Post Modal (enhanced with dynamic full content) -->
+<div class="modal" id="postModal">
+    <div class="modal-content post-modal-content">
+        <button class="modal-close" id="postModalClose"><i class="fas fa-times"></i></button>
+        <div class="post-modal-hero">
+            <img id="postModalImage" src="" alt="Post image">
+            <span class="post-modal-category" id="postModalCategory">News</span>
+        </div>
+        <div class="post-modal-body">
+            <div class="post-modal-meta">
+                <span><i class="fas fa-calendar"></i><span id="postModalDate">—</span></span>
+                <span><i class="fas fa-user"></i>CLUB HOTEK TSS</span>
+            </div>
+            <h2 id="postModalTitle">Post Title</h2>
+            <div id="postModalFullContent" class="post-modal-content-text"><p>Content coming soon.</p></div>
+            <div class="post-modal-footer">
+                <button class="btn btn-primary" id="postModalCloseBtn"><i class="fas fa-arrow-left"></i> <span data-i18n="backToNews">Back to News</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo"><div><strong>CLUB HOTEK TSS</strong></div></div>
+            <p><strong>Hitamo neza utegure ejo heza.</strong><br><span data-i18n="footerTagline">Practical Skills for Better Life</span></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/250788301833"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerQuick">Quick Links</h3>
+            <a href="index.html" data-i18n="navHome">Home</a>
+            <a href="about.html" data-i18n="footerAbout">About Us</a>
+            <a href="trades.html" data-i18n="navTrades">Our Trades</a>
+            <a href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerOurTrades">Our Trades</h3>
+            <a href="trades.html" data-i18n="trade1Title">Food &amp; Beverage Operations</a>
+            <a href="trades.html" data-i18n="trade2Title">Automobile Mechanics</a>
+            <a href="trades.html" data-i18n="trade3Title">Culinary Arts</a>
+            <a href="trades.html" data-i18n="trade4Title">Tailoring</a>
+            <a href="trades.html" data-i18n="trade5Title">Hairdressing</a>
+            <a href="trades.html" data-i18n="trade6Title">Multimedia</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerContact">Contact</h3>
+            <p><i class="fas fa-location-dot"></i> Gisozi, Gasabo District</p>
+            <p><i class="fas fa-phone"></i> 0788301833</p>
+            <p><i class="fas fa-phone"></i> 0788627310</p>
+            <p><i class="fas fa-envelope"></i> clubhotek@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-content"><p>Copyright &copy; 2026 CLUB HOTEK TSS</p></div></div>
+</footer>
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toastMessage" data-i18n="toastSuccess">Message sent successfully.</span></div>
+<button id="scrollTop" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````~`
+<!-- Enhanced script: attach click events to open modal with FULL CONTENT for each post -->
+<script>
+    (function() {
+        // Extended content for each post (ID matched by data-title)
+        const postFullContentMap = {
+            "CLUB HOTEK TSS Strengthens Community Support Through Skills Program": `
+                <p><strong>Gisozi, 11 May 2026</strong> — On 11 May 2026, CLUB HOTEK TSS once again demonstrated its strong commitment to empowering young people through practical, community-focused skills training. The school hosted a special outreach event that brought together over 120 participants from the surrounding community, including youth, women, and local leaders.</p>
+                <p>The program featured hands-on workshops in culinary arts, tailoring, hairdressing, and basic automobile maintenance. Participants had the opportunity to learn directly from experienced instructors and current students, gaining insight into income-generating skills that can be applied immediately.</p>
+                <h4>A Bridge to Employment</h4>
+                <p>“Our goal is not just to train students, but to uplift the entire community,” said the school director during the opening remarks. “When we share our skills, we create a ripple effect that leads to job creation and self-reliance.”</p>
+                <p>The event also included a free health check-up station and a small exhibition where graduates showcased products they have made, such as garments, baked goods, and handcrafted items. Several participants expressed interest in enrolling in the school’s short courses, and on-the-spot registration was offered.</p>
+                <p>CLUB HOTEK TSS extends its gratitude to all volunteers, staff, and partners who made this day a success. The school plans to make this community skills program a quarterly activity.</p>
+            `,
+            "CLUB HOTEK TSS Celebrates a Colorful and Inspiring Cultural Day": `
+                <p><strong>Gisozi, 24 February 2026</strong> — CLUB HOTEK TSS was filled with excitement, color, and joy on Friday, 24th February as students, staff and parents gathered for the annual Cultural Day celebration. The event, held on the school grounds, aimed to celebrate Rwanda’s rich cultural heritage and promote unity among the diverse student body.</p>
+                <p>The day kicked off with a vibrant parade featuring traditional Intore dancers, drummers, and students dressed in attire representing all provinces of Rwanda. Each class presented a short performance, including traditional songs, poetry, and sketches highlighting Rwandan values such as respect, integrity, and solidarity.</p>
+                <h4>Food, Craft & Community</h4>
+                <p>A highlight of the day was the culinary exhibition, where students from the Culinary Arts department prepared a variety of traditional dishes including ubugali, isombe, and brochettes. Parents and guests were invited to taste the food, which was praised for its authentic flavor and beautiful presentation.</p>
+                <p>“Cultural Day is one of our most beloved traditions,” said the Dean of Students. “It reminds us of who we are and where we come from, while also strengthening the bond between our students, families, and the community.”</p>
+                <p>The celebration concluded with awards for the best performance, best traditional outfit, and best culinary dish. CLUB HOTEK TSS thanks all parents and partners who contributed to making the event a memorable success.</p>
+            `,
+            "CLUB HOTEK TSS Awarded Top TVET School in Gasabo for 2024–2025": `
+                <p><strong>Gisozi, 19 January 2026</strong> — CLUB HOTEK TSS is proud to announce that it has been officially recognized as one of the leading TVET institutions in Gasabo District for the 2024–2025 academic year. The award was presented by the Gasabo District Education Office during a ceremony held at the district headquarters.</p>
+                <p>The recognition comes after a rigorous evaluation process that assessed student performance, graduation rates, infrastructure, industry partnerships, and community impact. CLUB HOTEK TSS scored exceptionally high in practical skills training and employment outcomes for graduates.</p>
+                <h4>Recognition for Excellence</h4>
+                <p>“This award is a testament to the hard work of our students, the dedication of our teachers, and the support of our parents and partners,” said the school’s Principal. “It motivates us to continue raising the bar and to produce even more skilled professionals for Rwanda’s growing economy.”</p>
+                <p>Over the past year, CLUB HOTEK TSS has expanded its workshop facilities, introduced new short courses, and strengthened ties with local hotels, garages, and creative studios. As a result, more than 85% of its graduates secured employment or started their own businesses within six months.</p>
+                <p>The school dedicates this award to all its students and promises to keep striving for excellence in TVET education.</p>
+            `,
+            "New Multimedia Workshop Officially Opened": `
+                <p><strong>Gisozi, 15 December 2025</strong> — CLUB HOTEK TSS has officially opened a brand-new Multimedia Workshop equipped with modern cameras, computers and design software to enhance creativity and hands-on learning. The facility was inaugurated in a ceremony attended by school leaders, students, and representatives from the local creative industry.</p>
+                <p>The workshop includes a dedicated photography studio, a video editing suite, and a computer lab with the latest Adobe Creative Cloud and other design tools. It is designed to give students in the Multimedia program real-world experience in content creation, filmmaking, graphic design, and digital marketing.</p>
+                <h4>A Hub for Creative Talent</h4>
+                <p>“We want our students to be creators, not just consumers of media,” said the head of the Multimedia department. “This workshop will allow them to produce professional-grade work while still in school, giving them a competitive edge when they enter the job market.”</p>
+                <p>The first projects to be produced in the new workshop include a school documentary and a series of promotional videos for local businesses. Students are already excited to start using the equipment, and the school plans to open the workshop for community workshops on weekends.</p>
+                <p>CLUB HOTEK TSS extends its gratitude to all donors and partners who made this project possible.</p>
+            `,
+            "Students Shine in National Skills Competition": `
+                <p><strong>Kigali, 02 November 2025</strong> — A team of CLUB HOTEK TSS students represented the school with pride at the National TVET Skills Competition, showcasing outstanding talent in culinary arts, tailoring and multimedia. The competition, held in Kigali, brought together over 40 TVET schools from across the country.</p>
+                <p>In the culinary category, our students prepared a three-course meal that impressed the judges with its creativity and use of local ingredients. The tailoring team presented a mini-collection inspired by Rwandan culture, while the multimedia team produced a short documentary on the theme of “Skills for a Better Future.”</p>
+                <h4>Medals and Recognition</h4>
+                <p>CLUB HOTEK TSS walked away with a silver medal in culinary arts and a special jury mention for the multimedia documentary. The tailoring team received a certificate of excellence for craftsmanship. These achievements reflect the high quality of training and the dedication of both students and instructors.</p>
+                <p>“We are incredibly proud of our students,” said the team coach. “They worked for weeks, practicing after class and perfecting their skills. This experience will stay with them and inspire other students to aim high.”</p>
+                <p>The school congratulates all participants and looks forward to even greater success in the next edition of the competition.</p>
+            `
+        };
+
+        // Default fallback content if not found
+        function getFullContent(title, category, date) {
+            if (postFullContentMap[title]) {
+                return postFullContentMap[title];
+            }
+            return `<p>Full details about "${title}" will be published soon. Stay tuned for more information from CLUB HOTEK TSS.</p><p>This story is part of our ongoing coverage of school news, achievements, and events. For more information, please contact the school administration.</p>`;
+        }
+
+        // Map category to readable label
+        const categoryLabels = {
+            "Community": "Community",
+            "Events": "Events",
+            "Achievements": "Achievements",
+            "Campus": "Campus",
+            "Competitions": "Competitions"
+        };
+
+        // Get modal elements
+        const postModal = document.getElementById('postModal');
+        const postModalImage = document.getElementById('postModalImage');
+        const postModalCategory = document.getElementById('postModalCategory');
+        const postModalDate = document.getElementById('postModalDate');
+        const postModalTitle = document.getElementById('postModalTitle');
+        const postModalFullContent = document.getElementById('postModalFullContent');
+        const postModalClose = document.getElementById('postModalClose');
+        const postModalCloseBtn = document.getElementById('postModalCloseBtn');
+
+        // Function to open modal with post data
+        function openPostModal(title, date, image, category) {
+            // Set image
+            if (image) {
+                postModalImage.src = image;
+                postModalImage.alt = title;
+                postModalImage.style.display = 'block';
+            } else {
+                postModalImage.style.display = 'none';
+            }
+
+            // Set category
+            postModalCategory.textContent = categoryLabels[category] || category || 'News';
+
+            // Set date (format if needed, but we already have string)
+            postModalDate.textContent = date || 'Date unknown';
+
+            // Set title
+            postModalTitle.textContent = title;
+
+            // Set full content
+            postModalFullContent.innerHTML = getFullContent(title, category, date);
+
+            // Show modal
+            postModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+
+            // Reset scroll position of content
+            postModalFullContent.scrollTop = 0;
+        }
+
+        // Function to close modal
+        function closePostModal() {
+            postModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Attach click events to all .post-item and .recent-post-item
+        document.querySelectorAll('.post-item, .recent-post-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Avoid triggering if the click is on a link inside (for safety)
+                if (e.target.closest('a') && !e.target.closest('.post-more')) {
+                    return;
+                }
+                // Also avoid if clicked on a button inside (none exist, but just in case)
+                if (e.target.closest('button')) return;
+
+                const title = this.dataset.title;
+                const date = this.dataset.date;
+                const image = this.dataset.image;
+                const category = this.dataset.category || 'News';
+
+                if (title) {
+                    openPostModal(title, date, image, category);
+                } else {
+                    // fallback: try to get from child elements
+                    const postTitleEl = this.querySelector('.post-title, .rp-title');
+                    const imgEl = this.querySelector('img');
+                    if (postTitleEl) {
+                        const fallbackTitle = postTitleEl.textContent.trim();
+                        const fallbackDate = date || this.querySelector('.rp-meta')?.textContent || 'Date unknown';
+                        const fallbackImage = imgEl ? imgEl.src : '';
+                        openPostModal(fallbackTitle, fallbackDate, fallbackImage, category);
+                    }
+                }
+            });
+        });
+
+        // Close modal events
+        postModalClose.addEventListener('click', closePostModal);
+        postModalCloseBtn.addEventListener('click', closePostModal);
+
+        // Close modal when clicking on overlay (background)
+        postModal.addEventListener('click', function(e) {
+            if (e.target === postModal) {
+                closePostModal();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && postModal.classList.contains('active')) {
+                closePostModal();
+            }
+        });
+
+        // Make sure modal exists, otherwise log
+        if (!postModal) {
+            console.warn('Post modal element not found. Read More functionality may not work.');
+        }
+
+        // Add a small helper to ensure the "Read More" text appears clickable
+        // Also handle the case where user clicks exactly on the "Read More" span (it should also open)
+        // The event listener on the parent .post-item already handles it.
+
+        // Preload modal if needed? Not necessary.
+    })();
+</script>
+</body>
+</html>

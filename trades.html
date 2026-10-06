@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our 6 TVET trades: Food & Beverage, Automobile, Culinary Arts, Tailoring, Hairdressing and Multimedia.">
+    <title>Our Trades | CLUB HOTEK TSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<!-- Same preloader + top-bar + header as about.html but with "trades" active and select option "trades.html" selected -->
+
+<div id="preloader"><div class="loader"><div class="loader-circle"></div><h3>CLUB HOTEK TSS</h3><p data-i18n="loading">Loading...</p></div></div>
+
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <div class="top-bar-marquee"><marquee><p data-i18n="welcomeMarquee" style="font-family: Arial, Helvetica, sans-serif; font-style: oblique; font-size: x-large;">Welcome to CLUB HOTEK TSS, Admission is Ongoing in this upcoming Academic year 🎓🎓🎓</p></marquee></div>
+        <div class="top-bar-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                <div class="lang-dropdown">
+                    <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                    <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                    <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                    <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                    <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                    <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="CLUB HOTEK TSS Logo" onerror="this.style.display='none';">
+            <div class="logo-text"><strong>CLUB HOTEK</strong><span>TSS</span></div>
+        </a>
+   <!-- 
+        <div class="nav-select-wrap">
+            <select class="nav-select" id="navSelect" aria-label="Quick page jump">
+                <option value="index.html" selected data-i18n="navHome">Home</option>
+                <option value="about.html" data-i18n="navAbout">About</option>
+                <option value="trades.html" data-i18n="navTrades">Trades</option>
+                <option value="performance.html" data-i18n="navPerformance">Performance</option>
+                <option value="admissions.html" data-i18n="navAdmissions">Admissions</option>
+                <option value="gallery.html" data-i18n="navGallery">Gallery</option>
+                <option value="news.html" data-i18n="navNews">News &amp; Events</option>
+                <option value="faq.html" data-i18n="navFaq">FAQ</option>
+                <option value="contact.html" data-i18n="navContact">Contact</option>
+            </select>
+        </div>
+-->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+            <a href="trades.html" class="nav-link active" data-i18n="navTrades">Trades</a>
+            <a href="performance.html" class="nav-link" data-i18n="navPerformance">Performance</a>
+            <a href="admissions.html" class="nav-link" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" class="nav-link" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" class="nav-link" data-i18n="navFaq">FAQ</a>
+            <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            <div class="mobile-lang-block">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn" type="button"><i class="fas fa-globe"></i><span data-current-lang>English</span><i class="fas fa-chevron-down caret"></i></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en" type="button"><span class="flag">🇬🇧</span> English</button>
+                        <button class="lang-option" data-lang="fr" type="button"><span class="flag">🇫🇷</span> Français</button>
+                        <button class="lang-option" data-lang="sw" type="button"><span class="flag">🇹🇿</span> Kiswahili</button>
+                        <button class="lang-option" data-lang="rw" type="button"><span class="flag">🇷🇼</span> Kinyarwanda</button>
+                        <button class="lang-option" data-lang="es" type="button"><span class="flag">🇪🇸</span> Español</button>
+                        <button class="lang-option" data-lang="it" type="button"><span class="flag">🇮🇹</span> Italiano</button>
+                    </div>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="page-banner" style="background-image: url('assets/images/culinary.jpg');">
+    <div class="page-banner-overlay"></div>
+    <div class="container page-banner-content">
+        <nav class="page-breadcrumb"><a href="index.html" data-i18n="navHome">Home</a><span>/</span><span data-i18n="navTrades">Trades</span></nav>
+        <h1><span data-i18n="tradesHeading1">Explore Our</span> <span data-i18n="tradesHeading2">TVET Trades</span></h1>
+        <p data-i18n="tradesTagline">Choose a practical career path and develop skills for your future.</p>
+    </div>
+</section>
+
+<section class="section trades-section">
+    <div class="container">
+        <div class="trades-grid">
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/fbo.jpg" alt="Food and Beverage"><span class="trade-number">01</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 data-i18n="trade1Title">Food &amp; Beverage Operations</h3>
+                    <p data-i18n="trade1Desc">Practical training in food production, restaurant operations, hospitality and beverage services.</p>
+                    <div class="levels"><span>Level 3</span><span>Level 4</span><span>Level 5</span></div>
+                </div>
+            </article>
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/automobile.jpg" alt="Automobile"><span class="trade-number">02</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-car"></i></div>
+                    <h3 data-i18n="trade2Title">Automobile Mechanics</h3>
+                    <p data-i18n="trade2Desc">Hands-on automotive repair, maintenance, diagnostics and mechanical skills.</p>
+                    <div class="levels"><span>Level 1</span></div>
+                </div>
+            </article>
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/culinary.jpg" alt="Culinary"><span class="trade-number">03</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-cheese"></i></div>
+                    <h3 data-i18n="trade3Title">Culinary Arts</h3>
+                    <p data-i18n="trade3Desc">Develop professional cooking, food preparation, kitchen management and presentation skills.</p>
+                    <div class="levels"><span>Level 1</span></div>
+                </div>
+            </article>
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/tailoring.jpg" alt="Tailoring"><span class="trade-number">04</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-scissors"></i></div>
+                    <h3 data-i18n="trade4Title">Tailoring</h3>
+                    <p data-i18n="trade4Desc">Learn garment design, cutting, sewing, fashion and clothing production.</p>
+                    <div class="levels"><span>Level 1</span></div>
+                </div>
+            </article>
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/hairdressing.jpg" alt="Hairdressing"><span class="trade-number">05</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-spa"></i></div>
+                    <h3 data-i18n="trade5Title">Hairdressing</h3>
+                    <p data-i18n="trade5Desc">Practical training in hair care, styling, beauty services and salon management.</p>
+                    <div class="levels"><span>Level 1</span></div>
+                </div>
+            </article>
+            <article class="trade-card">
+                <div class="trade-image"><img src="assets/images/multimedia.jpg" alt="Multimedia"><span class="trade-number">06</span></div>
+                <div class="trade-content">
+                    <div class="trade-icon"><i class="fas fa-photo-film"></i></div>
+                    <h3 data-i18n="trade6Title">Multimedia</h3>
+                    <p data-i18n="trade6Desc">Learn photography, video production, graphic design, digital media and creative communication.</p>
+                    <div class="levels"><span>Level 1</span></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CURRICULUM TABS -->
+<section class="section" style="background: var(--light);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">WHAT YOU WILL LEARN</span>
+            <h2>Program <span>Curriculum</span></h2>
+            <div class="section-line"></div>
+            <p>Click a trade to preview its core learning areas.</p>
+        </div>
+        <div class="curriculum-tabs" id="curriculumTabs">
+            <button class="curriculum-tab active" data-tab="fbo">Food &amp; Beverage</button>
+            <button class="curriculum-tab" data-tab="auto">Automobile</button>
+            <button class="curriculum-tab" data-tab="culinary">Culinary Arts</button>
+            <button class="curriculum-tab" data-tab="tailoring">Tailoring</button>
+            <button class="curriculum-tab" data-tab="hair">Hairdressing</button>
+            <button class="curriculum-tab" data-tab="media">Multimedia</button>
+        </div>
+        <div class="curriculum-panel active" id="tab-fbo">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Food production &amp; kitchen operations</li>
+                <li><i class="fas fa-check"></i> Restaurant service &amp; customer care</li>
+                <li><i class="fas fa-check"></i> Beverage preparation &amp; bar service</li>
+                <li><i class="fas fa-check"></i> Hygiene, safety &amp; food handling</li>
+                <li><i class="fas fa-check"></i> Cost control &amp; menu planning</li>
+                <li><i class="fas fa-check"></i> Hospitality communication</li>
+            </ul>
+        </div>
+        <div class="curriculum-panel" id="tab-auto">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Engine repair &amp; maintenance</li>
+                <li><i class="fas fa-check"></i> Brake &amp; suspension systems</li>
+                <li><i class="fas fa-check"></i> Electrical &amp; electronic diagnostics</li>
+                <li><i class="fas fa-check"></i> Transmission &amp; drivetrain</li>
+                <li><i class="fas fa-check"></i> Workshop safety &amp; tools</li>
+                <li><i class="fas fa-check"></i> Vehicle inspection &amp; servicing</li>
+            </ul>
+        </div>
+        <div class="curriculum-panel" id="tab-culinary">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Professional cooking techniques</li>
+                <li><i class="fas fa-check"></i> Baking &amp; pastry</li>
+                <li><i class="fas fa-check"></i> Plating &amp; presentation</li>
+                <li><i class="fas fa-check"></i> International &amp; local cuisine</li>
+                <li><i class="fas fa-check"></i> Kitchen management</li>
+                <li><i class="fas fa-check"></i> Nutrition &amp; food safety</li>
+            </ul>
+        </div>
+        <div class="curriculum-panel" id="tab-tailoring">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Pattern drafting &amp; grading</li>
+                <li><i class="fas fa-check"></i> Garment construction</li>
+                <li><i class="fas fa-check"></i> Fashion design &amp; illustration</li>
+                <li><i class="fas fa-check"></i> Fabric selection &amp; care</li>
+                <li><i class="fas fa-check"></i> Industrial sewing machines</li>
+                <li><i class="fas fa-check"></i> Entrepreneurship in fashion</li>
+            </ul>
+        </div>
+        <div class="curriculum-panel" id="tab-hair">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Hair cutting &amp; styling</li>
+                <li><i class="fas fa-check"></i> Braiding &amp; weaving</li>
+                <li><i class="fas fa-check"></i> Hair treatment &amp; care</li>
+                <li><i class="fas fa-check"></i> Beauty &amp; skincare basics</li>
+                <li><i class="fas fa-check"></i> Salon operations &amp; management</li>
+                <li><i class="fas fa-check"></i> Client consultation skills</li>
+            </ul>
+        </div>
+        <div class="curriculum-panel" id="tab-media">
+            <ul class="curriculum-list">
+                <li><i class="fas fa-check"></i> Photography &amp; lighting</li>
+                <li><i class="fas fa-check"></i> Video production &amp; editing</li>
+                <li><i class="fas fa-check"></i> Graphic design (Adobe Suite)</li>
+                <li><i class="fas fa-check"></i> Digital marketing &amp; social media</li>
+                <li><i class="fas fa-check"></i> Audio production</li>
+                <li><i class="fas fa-check"></i> Creative storytelling</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CAREER OUTCOMES -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">AFTER GRADUATION</span>
+            <h2>Your <span>Career Paths</span></h2>
+            <div class="section-line"></div>
+            <p>Where our graduates work and how much they can earn.</p>
+        </div>
+        <div class="career-grid">
+            <div class="career-card"><div class="career-icon"><i class="fas fa-hotel"></i></div><h3>Hospitality &amp; Tourism</h3><p>Hotels, restaurants, lodges and event venues.</p><div class="career-salary">Avg. salary: RWF 120k – 250k / month</div></div>
+            <div class="career-card"><div class="career-icon"><i class="fas fa-wrench"></i></div><h3>Automotive Industry</h3><p>Garages, dealerships, fleet maintenance companies.</p><div class="career-salary">Avg. salary: RWF 150k – 300k / month</div></div>
+            <div class="career-card"><div class="career-icon"><i class="fas fa-utensils"></i></div><h3>Culinary Sector</h3><p>Restaurants, bakeries, catering and food startups.</p><div class="career-salary">Avg. salary: RWF 130k – 280k / month</div></div>
+            <div class="career-card"><div class="career-icon"><i class="fas fa-shirt"></i></div><h3>Fashion &amp; Tailoring</h3><p>Boutiques, self-employment, fashion brands.</p><div class="career-salary">Avg. salary: RWF 100k – 250k / month</div></div>
+            <div class="career-card"><div class="career-icon"><i class="fas fa-scissors"></i></div><h3>Beauty &amp; Salon</h3><p>Salons, spas, freelance and beauty businesses.</p><div class="career-salary">Avg. salary: RWF 80k – 200k / month</div></div>
+            <div class="career-card"><div class="career-icon"><i class="fas fa-camera"></i></div><h3>Creative &amp; Media</h3><p>Studios, agencies, digital marketing and freelance.</p><div class="career-salary">Avg. salary: RWF 150k – 350k / month</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section class="section" style="background: var(--light);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">RESOURCES</span>
+            <h2>Download <span>Program Guides</span></h2>
+            <div class="section-line"></div>
+            <p>Get detailed information about each program.</p>
+        </div>
+        <div class="resource-grid">
+            <a href="assets/files/fbo-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>F&amp;B Syllabus</h4><span>PDF • 1.2 MB</span></div></a>
+            <a href="assets/files/auto-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>Automobile Syllabus</h4><span>PDF • 1.1 MB</span></div></a>
+            <a href="assets/files/culinary-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>Culinary Syllabus</h4><span>PDF • 1.3 MB</span></div></a>
+            <a href="assets/files/tailoring-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>Tailoring Syllabus</h4><span>PDF • 1.0 MB</span></div></a>
+            <a href="assets/files/hair-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>Hairdressing Syllabus</h4><span>PDF • 1.0 MB</span></div></a>
+            <a href="assets/files/media-syllabus.pdf" class="resource-card" download><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div><h4>Multimedia Syllabus</h4><span>PDF • 1.4 MB</span></div></a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer (same) -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo"><div><strong>CLUB HOTEK TSS</strong></div></div>
+            <p><strong>Hitamo neza utegure ejo heza.</strong><br><span data-i18n="footerTagline">Practical Skills for Better Life</span></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/watch?v=hExioXqzNtE"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/250788301833"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerQuick">Quick Links</h3>
+            <a href="index.html" data-i18n="navHome">Home</a>
+            <a href="about.html" data-i18n="footerAbout">About Us</a>
+            <a href="trades.html" data-i18n="navTrades">Our Trades</a>
+            <a href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="news.html" data-i18n="navNews">News &amp; Events</a>
+            <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerOurTrades">Our Trades</h3>
+            <a href="trades.html" data-i18n="trade1Title">Food &amp; Beverage Operations</a>
+            <a href="trades.html" data-i18n="trade2Title">Automobile Mechanics</a>
+            <a href="trades.html" data-i18n="trade3Title">Culinary Arts</a>
+            <a href="trades.html" data-i18n="trade4Title">Tailoring</a>
+            <a href="trades.html" data-i18n="trade5Title">Hairdressing</a>
+            <a href="trades.html" data-i18n="trade6Title">Multimedia</a>
+        </div>
+        <div class="footer-column">
+            <h3 data-i18n="footerContact">Contact</h3>
+            <p><i class="fas fa-location-dot"></i> Gisozi, Gasabo District</p>
+            <p><i class="fas fa-phone"></i> 0788301833</p>
+            <p><i class="fas fa-phone"></i> 0788627310</p>
+            <p><i class="fas fa-envelope"></i> clubhotek@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-content"><p>Copyright &copy; 2026 CLUB HOTEK TSS</p></div></div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toastMessage" data-i18n="toastSuccess">Message sent successfully.</span></div>
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
